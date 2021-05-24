@@ -66,8 +66,10 @@ const stopStopWatch = () => {
     
     measurement = measurement + 1;
 
-    showLastTime(lastTime);
-    saveTime(archiveList, measurement);
+     if(sec > 0 || min > 0 || hour > 0) {
+        showLastTime(lastTime);
+        saveTime(archiveList, measurement);
+    }
 
     sec = 0;
     min = 0;
